@@ -1,0 +1,5 @@
+.env
+OPENAI_API_KEY.env
+vendor/
+*.log
+*.tmp
