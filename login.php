@@ -5,7 +5,7 @@ $error = "";
 
 // Process login form
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $conn = new mysqli('localhost', 'root', '', 'library_db');
+    $conn = new mysqli('localhost', 'root', '', 'library_db(dummy)');
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
