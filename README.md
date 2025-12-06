@@ -59,4 +59,5 @@ http://localhost/LibrarySystem
 
 Ном үзэх, зээлэх, үнэлэх, удирдах функцуудыг ашиглана.
 API түлхүүрүүдийг .env эсвэл тохиргооны файлуудад оруулна.
+/docs presentation ppt
 
