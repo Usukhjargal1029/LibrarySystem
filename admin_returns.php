@@ -10,7 +10,7 @@ include 'header.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['clear_returned'])) {
     $clearSql = "DELETE FROM borrowed_books WHERE return_date IS NOT NULL";
     if ($conn->query($clearSql)) {
-        $_SESSION['message'] = $lang['returned_books_cleared']; // ✅
+        $_SESSION['message'] = $lang['returned_books_cleared']; // 
     } else {
         $_SESSION['message'] = $lang['error_clearing_returned_books'] . $conn->error; // ✅
     }
@@ -30,7 +30,7 @@ $result = $conn->query($sql);
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title><?= $lang['admin_return_panel'] ?></title> <!-- ✅ -->
+<title><?= $lang['admin_return_panel'] ?></title> <!--  -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 <style>
 main { flex: 1; max-width: 1200px; margin: 40px auto 0 auto; width: 100%; }
@@ -49,7 +49,7 @@ button[type="submit"]:hover { background-color: #218838; }
 </style>
 <script>
   function confirmClearReturned() {
-      return confirm('<?= $lang['confirm_clear_returned'] ?>'); // ✅
+      return confirm('<?= $lang['confirm_clear_returned'] ?>'); // 
   }
 </script>
 </head>
@@ -60,12 +60,12 @@ button[type="submit"]:hover { background-color: #218838; }
         <?php unset($_SESSION['message']); ?>
     <?php endif; ?>
 
-    <h2 class="page-title"><?= $lang['admin_return_panel'] ?></h2> <!-- ✅ -->
+    <h2 class="page-title"><?= $lang['admin_return_panel'] ?></h2> <!--  -->
 
     <div class="clear-returned-container">
         <form method="POST" onsubmit="return confirmClearReturned();" style="margin:0;">
             <button type="submit" name="clear_returned" id="clearReturnedBtn" title="<?= $lang['delete_all_returned_records'] ?>">
-                <?= $lang['clear_returned_books'] ?> <!-- ✅ -->
+                <?= $lang['clear_returned_books'] ?> <!--  -->
             </button>
         </form>
     </div>
@@ -108,7 +108,7 @@ button[type="submit"]:hover { background-color: #218838; }
                                 <button type="submit"><?= $lang['mark_as_returned'] ?></button> <!-- ✅ -->
                             </form>
                         <?php else: ?>
-                            <?= $lang['returned'] ?> <!-- ✅ -->
+                            <?= $lang['returned'] ?> <!--  -->
                         <?php endif; ?>
                     </td>
                 </tr>
