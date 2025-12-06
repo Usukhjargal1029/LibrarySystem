@@ -2,7 +2,7 @@
 $host = 'localhost';
 $user = 'root';
 $password = '';
-$database = 'library_db';
+$database = 'library_db_dummy';
 
 $conn = new mysqli($host, $user, $password, $database);
 
