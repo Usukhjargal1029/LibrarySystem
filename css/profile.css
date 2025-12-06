@@ -1,0 +1,321 @@
+/* =========================
+   Profile Page Styles
+   ========================= */
+
+/* Base Styles */
+body {
+    background: #e5decb;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 1.4;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 35px;
+    flex: 1 0 auto;
+    min-height: 520px;
+    padding: 0 20px;
+}
+
+/* =========================
+   Profile Wrapper
+   ========================= */
+.profile-wrapper {
+    display: flex;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(204, 204, 204, 0.5);
+    max-width: 1020px;
+    width: 100%;
+    margin-bottom: 40px;
+    min-height: 520px;
+    overflow: hidden;
+}
+
+/* =========================
+   Sidebar
+   ========================= */
+.profile-sidebar {
+    background: #f8f7f3;
+    border-right: 1px solid #e4e2df;
+    width: 200px;
+    min-width: 150px;
+    border-radius: 8px 0 0 8px;
+    padding: 33px 0 25px 0;
+}
+
+.profile-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-sidebar li {
+    margin-bottom: 2px;
+    padding-left: 22px;
+}
+
+.profile-sidebar a {
+    color: #257ae7;
+    text-decoration: none;
+    padding: 12px 8px 12px 2px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 10px);
+    border-radius: 3px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.profile-sidebar a i {
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+}
+
+.profile-sidebar a.active,
+.profile-sidebar a:hover {
+    background: #eaf1fb;
+    color: #1566ba;
+}
+
+/* =========================
+   Main Content
+   ========================= */
+.profile-main {
+    flex: 1;
+    padding: 35px 40px 40px 38px;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e4e2df;
+}
+
+.profile-avatar {
+    background: #222;
+    color: #fff;
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-header-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.profile-username {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    color: #222;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Profile Links */
+.profile-links {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.profile-links a,
+.profile-links button {
+    background: #f3f5fa;
+    border: 1px solid #dbe3ef;
+    color: #257ae7;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 4px;
+    text-decoration: none;
+    transition: all 0.13s ease;
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+.profile-links a:hover,
+.profile-links button:hover {
+    background: #eaf1fb;
+    color: #084f92;
+    border-color: #cbd4e9;
+}
+
+.profile-links .privacy-btn.active {
+    background: #eaf1fb !important;
+    border: none !important;
+    color: #1987f6 !important;
+    font-weight: 700 !important;
+}
+
+/* Profile Content Area */
+.profile-content {
+    flex: 1;
+    margin-top: 20px;
+}
+
+.profile-stats h2 {
+    color: #222;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-item {
+    background: #f8f7f3;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #e4e2df;
+}
+
+.stat-number {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    color: #257ae7;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+
+/* =========================
+   Responsive Design
+   ========================= */
+@media (max-width: 768px) {
+    main {
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .profile-wrapper {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    
+    .profile-sidebar {
+        width: 100%;
+        min-width: auto;
+        border-radius: 8px 8px 0 0;
+        border-right: none;
+        border-bottom: 1px solid #e4e2df;
+        padding: 20px 0;
+    }
+    
+    .profile-sidebar ul {
+        display: flex;
+        overflow-x: auto;
+        padding: 0 15px;
+        gap: 5px;
+    }
+    
+    .profile-sidebar li {
+        padding: 0;
+        white-space: nowrap;
+        min-width: fit-content;
+    }
+
+    .profile-sidebar a {
+        padding: 10px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+    
+    .profile-main {
+        padding: 20px;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .profile-avatar {
+        margin-right: 0;
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-username {
+        font-size: 24px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    #aichatbot-window {
+        width: calc(100vw - 40px);
+        height: 400px;
+        right: 20px;
+        left: 20px;
+        bottom: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-links {
+        flex-direction: column;
+    }
+
+    .profile-links a,
+    .profile-links button {
+        text-align: center;
+    }
+
+    .profile-right {
+        gap: 8px;
+    }
+}
